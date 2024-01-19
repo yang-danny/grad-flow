@@ -4,7 +4,10 @@ import { useForm } from '../../utils/useForm'
 import { useMutation } from '@apollo/react-hooks'
 import {REGISTER_USER} from '../../graphql/authMutations'
 import {useNavigate, Link} from 'react-router-dom'
-
+import { FiUserPlus,FiUser } from "react-icons/fi";
+import { AiOutlineMail } from "react-icons/ai";
+import { CiLock } from "react-icons/ci";
+import { TiTickOutline } from "react-icons/ti";
 const Register = (props) => {
     const context= useContext(AuthContext)
     let navigate = useNavigate()
@@ -32,43 +35,62 @@ const Register = (props) => {
     })
 
   return (
-    <div>
-        <h2>Register</h2>
-        
-        <input
+    <div className='register'>
+      <div className="info">
+      <div className="header">
+          <h2>Register</h2>
+        <FiUserPlus size={32}/> 
+      </div>
+     <div className="username">
+       <input
             type="text"
-            placeholder="Username"
+            placeholder="&nbsp;&nbsp;Username"
             required
             name="username"
             onChange={onChange}
           />
+           <i><FiUser /></i>
+     </div>
+       <div className="email">
           <input
             type="text"
-            placeholder="Email"
+            placeholder="&nbsp;&nbsp;Email"
             required
             name="email"
             onChange={onChange}
           />
-          <input
+          <i><AiOutlineMail /></i>
+       </div>
+        <div className="password">
+           <input
             type="password"
-            placeholder="Password"
+            placeholder="&nbsp;&nbsp;Password"
             required
             name="password"
             onChange={onChange}
           />
+          <i><CiLock /></i>
+        </div>
+         <div className="confirm">
           <input
             type="password"
-            placeholder="Confirm Password"
+            placeholder="&nbsp;&nbsp;Confirm Password"
             required
             name="confirmPassword"
             onChange={onChange}
           />
+          <i><TiTickOutline /></i>
+         </div>
+          
           <button onClick={onSubmit}>
             Register
           </button>
-     
+        <span className='function-links'>
+          <p>Already an account?</p>
+          <Link className='links' to="/login">Login</Link>
+        </span>
         {errors.length > 0 && (
-        <div className="ui error message">
+        <div className="error">
           <ul className="list">
         {errors.map((error)=>{
            return (
@@ -78,10 +100,7 @@ const Register = (props) => {
           </ul>
         </div>
       )}
-        <span >
-          <p>Already an account?</p>
-          <Link to="/login">Login</Link>
-        </span>
+      </div>
     </div>
   )
 }

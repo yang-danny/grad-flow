@@ -1,0 +1,90 @@
+.login{
+ background-image: url("src/assets/login.png");
+   width: 1080px;
+   height: 690px;
+   position: fixed;
+   top: 150px;
+   background-color: var(--card-color);
+   border-radius: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   .info{
+    background: inherit;
+    width: 700px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 2;
+    border-radius: 10px;
+    .header{
+        display: flex;
+
+      h2{
+        margin-right: 20px;
+      }
+    }
+    .username, .password{
+    display: flex;
+    align-items: center;
+    position: relative;
+    i{
+   position: absolute;
+   font-size: 20px;
+   right: 10px;
+   color: white;   
+    }
+    }
+    input{
+        width: 200px;
+        height: 35px;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+    }
+    button{
+        width: 200px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: var(--blue);
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .function-links{
+       .links{
+        margin: 15px;
+        color: var(--purple);
+        font-weight: 600;
+        }
+    }
+    .error{
+        color: var(--pink);
+        font-size: 20px;
+    }
+   }
+   @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .info {
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+      background-color: rgba(255, 255, 255, 0.7);  
+    }
+  }
+}
+@media screen and (min-width: 280px) and (max-width: 1080px)  {
+    .login{
+     top: 10px;   
+     .info{
+        width: 400px;
+        .username, .password{
+            i{
+           position: absolute;
+           right: 5px; 
+            }
+            }
+     }
+    }
+    
+}

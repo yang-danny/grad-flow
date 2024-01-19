@@ -31,7 +31,9 @@
   
   .app-container {
     // background-color: var(--background);
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: var(--font-Advent);
     // overflow-x: hidden;
     // transition: 0.5s ease-in-out;

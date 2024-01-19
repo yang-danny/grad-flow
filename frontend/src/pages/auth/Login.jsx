@@ -4,21 +4,20 @@ import { useForm } from '../../utils/useForm'
 import { useMutation } from '@apollo/react-hooks'
 import {LOGIN_USER} from '../../graphql/authMutations'
 import {useNavigate, Link} from 'react-router-dom'
-
+import { FiUsers,FiUser } from "react-icons/fi";
+import { CiLock } from "react-icons/ci";
 
 const Login = (props) => {
   const context= useContext(AuthContext)
     let navigate = useNavigate()
     const [errors, setErrors] = useState([])
-
-       const loginUserCallback=()=>{
+    const loginUserCallback=()=>{
         loginUser()
     } 
     const {onChange, onSubmit, values}= useForm(loginUserCallback,{
         username:'',
         password:''
     })
-
     const [loginUser, {loading}]= useMutation(LOGIN_USER,{
         update(proxy, {data: {loginUser:userData}}){
             context.login(userData)
@@ -31,29 +30,41 @@ const Login = (props) => {
     })
 
   return (
-    <div>
-      <h2>Login</h2>
-          <input
+    <div className='login'>
+      <div className="info">
+        <div className="header">
+          <h2>Login</h2> 
+          <FiUsers size={32}/>
+        </div>
+      <div className="username"> 
+        <input
             type="text"
-            placeholder="Username"
+            placeholder="&nbsp;&nbsp;Username"
             required
             name="username"
             onChange={onChange}
           />
-          <input
+           <i><FiUser /></i>
+      </div>
+      <div className="password">
+      <input
             type="password"
-            placeholder="Password"
+            placeholder="&nbsp;&nbsp;Password"
             required
             name="password"
             onChange={onChange}
           />
-         
+          <i><CiLock /></i>
+      </div>
           <button onClick={onSubmit}>
             Login
           </button>
-     
+        <span className='function-links'>
+        <p>Do not have an account?</p>
+          <Link className='links' to="/register">Register</Link>
+        </span>
         {errors.length > 0 && (
-        <div className="ui error message">
+        <div className="error">
           <ul className="list">
         {errors.map((error)=>{
            return (
@@ -63,9 +74,8 @@ const Login = (props) => {
           </ul>
         </div>
       )}
-        <span >
-          <Link to="/register">Register</Link>
-        </span>
+        </div>
+       
     </div>
   )
 }
