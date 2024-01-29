@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Actor&family=Advent+Pro:wght@200;300;400;500;600;700&family=Almarai:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 :root {
     --blue: #2B4B9B;
     --pink: #E7267A;
@@ -18,6 +19,7 @@
     --font-Advent: "Advent Pro", sans-serif;
     --font-Actor: 'Actor', sans-serif;
     --font-Almarai: 'Almarai', sans-serif;
+    --font-Aclonica: 'Aclonica', sans-serif;
   }
   * {
     padding: 0;
@@ -28,32 +30,20 @@
   html {
     scroll-behavior: smooth;
   }
+
+
   
-  .app-container {
-    // background-color: var(--background);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--font-Advent);
-    // overflow-x: hidden;
-    // transition: 0.5s ease-in-out;
-    // padding: 2rem 4rem;
-    // @media screen and (min-width: 280px) and (max-width: 1080px) {
-    //   padding: 0;
-    // }
-  }
+  // @media only screen and (min-device-width: 280px) and (max-device-width: 1080px) {
+  //   .app-container::-webkit-scrollbar {
+  //     display: none;
+  //   }
+  // }
   
-  @media only screen and (min-device-width: 280px) and (max-device-width: 1080px) {
-    .app-container::-webkit-scrollbar {
-      display: none;
-    }
-  }
+  // ::-webkit-scrollbar {
+  //   background-color: #111111;
+  //   width: 0.2rem;
+  // }
   
-  ::-webkit-scrollbar {
-    background-color: #111111;
-    width: 0.2rem;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: var(--orange);
-  }
+  // ::-webkit-scrollbar-thumb {
+  //   background-color: var(--orange);
+  // }

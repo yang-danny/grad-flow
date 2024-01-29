@@ -36,6 +36,7 @@ const Register = (props) => {
 
   return (
     <div className='register'>
+      <div className="register-box">
       <div className="info">
       <div className="header">
           <h2>Register</h2>
@@ -100,7 +101,9 @@ const Register = (props) => {
           </ul>
         </div>
       )}
+      </div>  
       </div>
+      
     </div>
   )
 }

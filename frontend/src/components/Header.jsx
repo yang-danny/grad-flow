@@ -95,8 +95,17 @@ const Header = () => {
       navigate('/')
     }
 const [navState, setNavState] = useState(false);
+const [scrollPage, setScrollPage] = useState(false)  
+const fixNavbar=()=>{
+    if (window.scrollY>50) {
+      setScrollPage(true);
+    } else {
+       setScrollPage(false)
+    }
+  }
+  window.addEventListener("scroll", fixNavbar)
 return (
-<nav>
+<header className={scrollPage? "fixed": ''}>
     <div className="brand-container">
         <div className="brand">
         <Link to='/'><img src={logo}/></Link>
@@ -147,7 +156,7 @@ return (
         )}
         
       </span>
-</nav>
+</header>
 )
 }
 

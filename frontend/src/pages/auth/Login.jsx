@@ -31,7 +31,8 @@ const Login = (props) => {
 
   return (
     <div className='login'>
-      <div className="info">
+      <div className="login-box">
+    <div className="info">
         <div className="header">
           <h2>Login</h2> 
           <FiUsers size={32}/>
@@ -75,7 +76,7 @@ const Login = (props) => {
         </div>
       )}
         </div>
-       
+      </div>  
     </div>
   )
 }

@@ -1,0 +1,64 @@
+.featured{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-Advent);
+    margin-top: 20px;
+
+    .featured-box{
+    width: 1080px;
+    background-color: var(--card-color);
+    border-radius: 10px;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+        font-size: 30px;
+        font-weight: 500;
+        color: var(--blue);
+        margin-top: 10px;
+    }
+    .providers{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 50px;
+        margin-bottom: 10px;
+        img{
+            width: 160px;
+            height: 100%;
+        }
+        #linkedin{
+            margin-top: 20px;
+            height: 50px;
+        }
+        #seek{
+            margin-top: 20px;
+            height: 60px;
+        }
+        #workforce{
+            margin-top: 15px;
+            height: 65px;
+        }
+    }
+    }
+    
+}
+@media screen and (min-width: 280px) and (max-width: 1080px)  {
+.featured{
+    margin-top: 0;
+    height: auto;
+    .featured-box{
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+        .providers{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        }
+    }
+}
+}

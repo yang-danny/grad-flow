@@ -1,0 +1,83 @@
+.cv{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-Advent);
+    .cv-box{
+    width: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+        .left{
+            width: 50%;
+            height: 360px;
+            background-color: var(--card-color);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: space-around;
+            padding-left: 80px;
+            padding-right: 80px;
+            h2{
+                margin-top: 30px;
+                color: var(--blue);
+                font-weight: 500;
+            }
+            p{
+                margin-top: 10px;
+                color: var(--grey);
+            }
+            .steps{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                margin-top: 20px;
+                .one, .two, .three{
+                    display: flex;
+                    justify-content: start;
+                    margin-top: 5px;
+                    h1{
+                        color: var(--pink);
+                        margin-right: 20px;
+                        font-size: 40px;
+                        font-family: var(--font-Aclonica);
+                    }
+                    p{
+                        color: var(--purple);
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                }
+            }
+           
+        }
+        .right{
+            width: 50%;
+            height: 360px; 
+            img{
+                width: 100%;
+                height: 360px;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 280px) and (max-width: 1080px)  {
+    .cv{
+        height: auto;
+    flex-direction: column;
+    padding: 10px;
+    .cv-box{
+        width: auto;
+        flex-direction: column;
+        .left{
+        width: 100%;
+        }
+        .right{
+         width: 100%;
+        }
+    }
+    }
+}

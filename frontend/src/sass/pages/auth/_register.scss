@@ -1,9 +1,13 @@
 .register{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  .register-box{
       background-image: url("src/assets/register.jpg");
       width: 1080px;
       height: 690px;
-      position: fixed;
-      top: 150px;
       background-color: var(--card-color);
       border-radius: 10px;
       display: flex;
@@ -22,6 +26,7 @@
        border-radius: 10px;
        .header{
            display: flex;
+           color: white;
          h2{
            margin-right: 20px;
          }
@@ -51,8 +56,12 @@
            background-color: var(--blue);
            font-size: 18px;
            font-weight: 700;
+           color: white;
        }
        .function-links{
+        p{
+          color: white;
+        }
           .links{
            margin: 15px;
            color: var(--purple);
@@ -71,13 +80,21 @@
          background-color: rgba(255, 255, 255, 0.7);  
        }
      }
+    }
    }
    @media screen and (min-width: 280px) and (max-width: 1080px)  {
        .register{
-        top: 10px;   
-        .info{
+        width: 100%;
+    height: auto;
+    margin: 0;
+    .register-box{
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+     .info{
+      margin: 20px;
            width: 400px;
-           height: 480px;
+           height: auto;
            gap: 15px;
            margin-top: 10px;
            .username, .password, .email, .confirm{
@@ -86,7 +103,15 @@
               right: 5px;
                }
                }
-        }
+               .function-links{
+                margin-bottom: 10px;
+                }
+                .error{
+                  margin-bottom: 10px;
+              }
+        } 
+    }  
+        
        }
        
    }

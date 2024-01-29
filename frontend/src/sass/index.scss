@@ -1,5 +1,12 @@
 @import "base/base";
 @import "components/header";
 @import "components/footer";
-@import "pages/login";
-@import "pages/register";
+@import "components/banner";
+@import "components/featured";
+@import "components/firstjob";
+@import "components/cv";
+@import "components/preparation";
+@import "components/download";
+@import "pages/auth/login";
+@import "pages/auth/register";
+@import "pages/home/home"

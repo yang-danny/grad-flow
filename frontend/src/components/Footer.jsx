@@ -6,6 +6,10 @@ import logo from '../assets/logo-blue.png';
 const Footer = () => {
   return (
    <footer>
+    <div className="footer-box">
+
+    
+    
     <div className="top">
     <div className="contact">
     <img src={logo} alt="" />
@@ -55,6 +59,7 @@ const Footer = () => {
                 <li><Link className='link'><FaYoutube /></Link></li>
             </ul>
         </div>
+    </div>
     </div>
    </footer>
   )
