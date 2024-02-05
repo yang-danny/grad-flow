@@ -1,0 +1,58 @@
+.card-box{
+    width: 530px;
+    background-color: var(--card-color);
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    .card-left{
+        width: 50%;
+        display: flex;
+        justify-content: start;
+        .candidate-avatar{
+            margin: 20px;
+            width: 55px;
+            height: 55px;
+            img{
+                width: 55px;
+                height: auto;
+            }
+        }
+        .candidate-info{
+            margin-top: 15px;
+            h2{
+                color: var(--blue);
+                font-weight: 500;
+            }
+            p{
+                color: var(--grey);
+                font-family:var(--font-Actor);
+            }
+        }
+    }
+    .card-right {
+        width: 50%;
+        margin-top: 10px;
+        font-family:var(--font-Actor);
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin-right: 20px;
+        h2{
+            color: var(--purple);
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        button {
+            width: 150px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            background-color: var(--light-blue);
+            color:var(--blue);
+            font-size: 14px;
+        }
+    }
+}

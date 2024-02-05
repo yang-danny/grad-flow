@@ -40,7 +40,7 @@
     position: absolute;
     font-size: 20px;
     right: 10px;
-    color: white;   
+    color:var(--grey);   
      }
      }
      input{
@@ -104,6 +104,7 @@
             i{
            position: absolute;
            right: 5px; 
+           
             }
             }
             .function-links{

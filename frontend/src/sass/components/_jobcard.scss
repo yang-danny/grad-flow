@@ -1,0 +1,70 @@
+.jobcard-box{
+    width: 255px;
+    background-color: var(--card-color);
+    border-radius: 10px;
+    margin: 10px;
+    .jobcard-top{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        .company-logo{
+            margin: 20px;
+            width: 55px;
+            height: 55px;
+            img{
+                width: 55px;
+                height: auto;
+            }
+        }
+        .company-info{
+            margin-top: 20px;
+            h2{
+                color: var(--blue);
+                font-weight: 500;
+            }
+            p{
+                font-family:var(--font-Actor);
+                color: var(--grey);
+            }
+        }
+    }
+    .jobcard-mid {
+        margin-left: 20px;
+        font-family:var(--font-Actor);
+        h2{
+            color: var(--purple);
+            font-weight: 500;
+        }
+        p{
+            color: var(--grey);
+        }
+    }
+    .jobcard-bottom {
+        font-family:var(--font-Actor);
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20px;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        .category {
+            width: 82px;
+            height: 30px;
+            background-color: var(--light-blue);
+            border-radius: 15px;
+            text-align: center;
+            font-size: 14px;
+            padding-top: 4px;
+            color: var(--blue);
+        }
+        .type {
+            margin-right: 20px;
+            width: 82px;
+            height: 30px;
+            border: 1px solid var(--pink);
+            text-align: center;
+            font-size: 14px;
+            padding-top: 4px;
+            color: var(--pink);
+        }
+    }
+}

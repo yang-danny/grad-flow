@@ -29,7 +29,7 @@ const dropMenu=[
         ]
     },
     {
-        title:"CV",
+        title:"CV & CL",
         path:"/cv",
         subMenu: [
             {

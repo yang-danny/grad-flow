@@ -1,0 +1,53 @@
+.jobs  {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-Advent);
+
+    .jobs-box{
+    width: 1080px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .jobs-top{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    h1{
+    color: var(--blue);
+    font-size: 36px;
+    font-weight:600 ;
+    } 
+    .show-all{
+        color: var(--pink);
+        font-size: 24px;
+
+    }
+    }
+
+    }
+    .jobs-bottom{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+}
+@media screen and (min-width: 280px) and (max-width: 1080px)  {
+   .jobs{
+    .jobs-box{
+        width: 100%;
+        .jobs-top{
+           h1{
+            margin-left: 10px;
+           }
+           .show-all{
+            margin-right: 10px;
+           }
+        }
+        .jobs-bottom{
+            grid-template-columns: auto auto;
+        }
+    }
+   }
+}

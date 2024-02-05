@@ -1,0 +1,36 @@
+.newscard-box{
+    width:255px;
+    background-color: var(--card-color);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family:  var( --font-Actor);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    .photo{
+        img{
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    }
+    .news-info{
+
+        p{
+            color: var(--grey);
+        }
+        h2{
+            font-weight: 500;
+            color: var(--purple);
+            font-size: 18px;
+        }
+    }
+}
+@media screen and (min-width: 280px) and (max-width: 1080px)  {
+    .newscard-box{
+        width: 100%;
+        padding: 30px;
+    }
+}

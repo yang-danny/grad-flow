@@ -70,7 +70,6 @@ header {
     .links {
       list-style-type: none;
       display: flex;
-      flex-direction: row;
       li{
         list-style: none;
         padding: 5px;
@@ -88,10 +87,10 @@ header {
         .nav-menu{
             display: flex;
             align-items:center;
+            justify-content: start;
              .link {
             width: 100px;
             position: relative;
-            display: block;
             color: var(--blue);
             font-weight: 600;
             text-decoration: none;
@@ -140,6 +139,7 @@ header {
     } 
     .menu-icon{
         margin-top: 5px;
+        
     }
         }
         .sub-menu{

@@ -1,0 +1,16 @@
+.spinner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    .spinner-box{
+        width: 1080px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    span{
+        color: var(--blue);
+        font-size: 20px;
+    }
+}

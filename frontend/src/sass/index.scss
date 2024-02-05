@@ -4,9 +4,17 @@
 @import "components/banner";
 @import "components/featured";
 @import "components/firstjob";
+@import "components/jobs";
+@import "components/jobcard";
+@import "components/news";
+@import "components/newscard";
+@import "components/candidates";
+@import "components/candidatecard";
 @import "components/cv";
 @import "components/preparation";
 @import "components/download";
+@import "components/spinner";
+
 @import "pages/auth/login";
 @import "pages/auth/register";
 @import "pages/home/home"
