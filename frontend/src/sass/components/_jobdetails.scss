@@ -1,0 +1,87 @@
+.job-details{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    .job-details-box{
+        width: 1080px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        .job-details-top{
+            width: 100%;
+            margin-top: 10px;
+            background-color: var(--card-color);
+            border-radius: 10px;
+            padding: 20px;
+            font-family:var(--font-Actor);
+            .company-info{
+                display: flex;
+                justify-content: space-between;
+                .info-left{
+                    img{
+                        width: 60px;
+                        height: auto;
+                    }
+                    h2{
+                        color: var(--purple);
+                        font-weight: 500;
+                    }
+                    h3{
+                        color: var(--blue);
+                    }
+                }
+                .info-right{
+                    display: flex;
+                    flex-direction: column;
+                    button{
+                        width: 100px;
+                        height: 35px;
+                        text-align: center;
+                        margin: 3px;
+                        border-radius: 5px;
+                        font-size: 16px;
+                        line-height:16px;
+                        
+                    }
+                    .btn-apply {
+                        border: 1px solid var(--blue);
+                        color: var(--blue);
+                        }
+                        .btn-save {
+                            border: 1px solid var(--purple);
+                            color: var(--purple);
+                            }
+                            .btn-forward {
+                                border: 1px solid var(--pink);
+                                color: var(--pink);
+                                }
+                }
+            }
+          
+            .location, .category, .salary, .type, .level, .shift, .eligibility, .closeDate{
+                display: flex;
+                align-items: center;
+                color: var(--grey);
+                margin-top: 10px;
+            p{
+                margin-left: 5px;
+            }
+            }
+        }
+        .job-details-bottom{
+            width: 100%;
+            margin-top: 10px;
+            background-color: var(--card-color);
+            border-radius: 10px;
+            padding: 20px;
+            font-family:var(--font-Actor);
+            text-align: justify;
+            h2{
+                color: var(--purple);
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

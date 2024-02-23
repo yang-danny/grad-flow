@@ -13,4 +13,17 @@ query {
   }
 }
 `
-export { FETCH_NEWS };
+const FETCH_NEWS_BY_ID=gql`
+query($newsId: ID!){
+  getNew(id: $newsId) {
+    title
+    publishDate
+    category
+    author
+    photo
+    body
+  }
+}
+`
+
+export { FETCH_NEWS,FETCH_NEWS_BY_ID };

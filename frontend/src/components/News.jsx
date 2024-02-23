@@ -21,9 +21,11 @@ const News = () => {
             </div>
             <div className="news-bottom">
                 <div className="big-news">
+                <Link to={`/news/${bigNews.id}`}>
                     <img src={bigNews.photo} alt="" />
                     <p>{bigNews.publishDate}</p>
                     <h2>{bigNews.title}</h2>
+                    </Link>
                 </div>
                 <div className="small-news">
                     {smallNews.map((news)=>(

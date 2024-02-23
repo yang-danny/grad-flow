@@ -1,0 +1,78 @@
+.candidate-details  {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    
+    font-family:var(--font-Actor);
+    .candidate-details-box{
+    width: 1080px;
+    background-color: var(--card-color);
+    border-radius: 10px;
+    margin-top: 10px;
+   
+    .candidate-info-box{
+        width: auto;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{ 
+            width: 100px; 
+            height: 100px;
+            margin-right: 20px;
+        }
+        .candidate-info{
+            h2{
+                color:var(--blue);
+                font-weight: 500;
+                font-family: var(--font-Advent);
+            }
+            h3{
+                color:var(--purple);
+                font-weight: 500;
+                
+            }
+            p{
+                color: var(--grey);
+            }
+    }
+    }
+    .employer-info{
+        display: flex;
+        height: auto;
+        min-height: 50px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        h1{
+                position: absolute;
+                top:10px;
+                left:23%;
+                color: var(--blue);
+                font-size: 25px;
+            }
+        .employer-container{
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            
+        }
+    }
+}
+}
+@media screen and (min-width: 280px) and (max-width: 1080px)  {
+.candidate-details-box{
+width: 100%;
+margin: 10px;
+ .candidate-info-box{
+flex-direction: column;
+ }
+ .employer-info{
+    .employer-container{
+        flex-direction: column;
+    }
+ }
+}
+}

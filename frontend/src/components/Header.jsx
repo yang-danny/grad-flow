@@ -12,11 +12,11 @@ const dropMenu=[
     },
     {
         title:"Job Hub",
-        path:"/jobs",
+        path:"",
         subMenu: [
             {
                 title:"Job Search",
-                path:"jobs"
+                path:"jobsearch"
             },
             {
                 title:"Research Employers",

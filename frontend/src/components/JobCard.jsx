@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 const JobCard = ({job})=> {
 
     const shortenText = (text, n) => {
@@ -23,7 +24,7 @@ const JobCard = ({job})=> {
          
         </div>
       <div className="jobcard-mid">
-        <h2>{job.title}</h2>
+        <Link className='job-title' to={`/jobs/${job.id}`}>{job.title}</Link>
       <p>{shortenText(job.description, 50)}</p>
       </div>
       <div className="jobcard-bottom">

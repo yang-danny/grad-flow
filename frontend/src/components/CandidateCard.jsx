@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 const CandidateCard = ({candidate}) => {
   return (
     <div className='card-box'>
@@ -15,7 +16,7 @@ const CandidateCard = ({candidate}) => {
         </div>
       <div className="card-right">
         <h2>{candidate.role}</h2>
-        <button>View Profile</button>
+        <Link to={`/candidate/${candidate.id}`}><button >View Profile</button></Link>
       </div>
 
     </div>

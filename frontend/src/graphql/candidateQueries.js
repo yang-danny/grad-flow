@@ -13,4 +13,30 @@ query{
   }
 }
 `
-export { FETCH_CANDIDATES };
+const FETCH_CANDIDATE_BY_ID=gql`
+query($candidateId: ID!) {
+  getCandidate(id: $candidateId) {
+    id
+    firstname
+    lastname
+    avatar
+    address
+    city
+    country
+    role
+    email
+    phone
+    school
+    degree
+    employers {
+      id
+      name
+      industry
+      website
+      logo
+      description
+    }
+  }
+}
+`
+export { FETCH_CANDIDATES,FETCH_CANDIDATE_BY_ID };

@@ -7,6 +7,11 @@ import "./sass/index.scss";
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import Download from './components/Download.jsx'
+import JobDetails from './components/JobDetails.jsx'
+import CandidateDetail from './components/CandidateDetail.jsx'
+import NewsDetails from './components/NewsDetails.jsx'
+import JobSearch from './pages/job/jobSearch.jsx'
+import JobSearchResult from './components/JobSearchResult.jsx'
 function App() {
  
   return (
@@ -16,6 +21,11 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
+        <Route path='/jobsearch' element={<JobSearch />} />
+        <Route path='/jobsearchresult' element={<JobSearchResult />} />
+        <Route path='/jobs/:jobId' element={<JobDetails />} />
+        <Route path='/candidate/:candidateId' element={<CandidateDetail />} />
+        <Route path='/news/:newsId' element={<NewsDetails />} />
       </Routes>
       <Download />
       <Footer />
