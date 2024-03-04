@@ -10,5 +10,13 @@ module.exports = {
               throw new ApolloError(err);
             }
           },
+          async getNew(parent,args,context) {
+            try {
+            const result = await New.findById(args.id);
+           return result
+            } catch (err) {
+              throw new ApolloError(err);
+            }
+          },
     },
 }

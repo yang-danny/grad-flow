@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { FiSearch,FiTag } from "react-icons/fi";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
@@ -15,10 +15,11 @@ const JobSearch = () => {
         location:"",
         type:""
         })
-        const { data} =useQuery(FETCH_JOB_TYPES)
-        const unique = data?.getJobTypes.filter((obj, index) => {
-          return index === data?.getJobTypes.findIndex(o => obj.type === o.type);
+    const { data} =useQuery(FETCH_JOB_TYPES)
+    const unique = data?.getJobTypes.filter((obj, index) => {
+        return index === data?.getJobTypes.findIndex(o => obj.type === o.type);
       });
+
     const updateSearchFilter=() => {
         jobSearchFilter.title=title;
         jobSearchFilter.location=location;

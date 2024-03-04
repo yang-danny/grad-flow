@@ -8,7 +8,8 @@ import { FiUserPlus,FiUser } from "react-icons/fi";
 import { AiOutlineMail } from "react-icons/ai";
 import { CiLock } from "react-icons/ci";
 import { TiTickOutline } from "react-icons/ti";
-const Register = (props) => {
+import Spinner from '../../components/Spinner'
+const Register = () => {
     const context= useContext(AuthContext)
     let navigate = useNavigate()
     const [errors, setErrors] = useState([])
@@ -33,7 +34,7 @@ const Register = (props) => {
         },
         variables:{registerInput:values}
     })
-
+    if (loading) return <Spinner />;
   return (
     <div className='register'>
       <div className="register-box">

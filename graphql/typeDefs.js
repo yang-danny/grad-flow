@@ -1,6 +1,16 @@
 const { gql } = require('apollo-server');
 
 module.exports = gql`
+enum Order {
+  ASC
+  DESC
+}
+
+input SortBy {
+  field: String
+  order: Order
+}
+
 type User {
     username: String
     email: String
@@ -33,6 +43,33 @@ type Job {
     description:  String 
     employer:Employer
 }
+type Provider {
+    name: String
+    logo: String
+}
+type Course {
+    id:ID!
+    title:  String 
+    photo: String
+    subject: String
+    type:  String
+    skills:  String
+    level:  String
+    duration: String
+    description: String
+    provider:Provider
+}
+input JobSearchFilter {
+    title:  String, 
+    location: String,
+    type:  String,
+}
+input CourseSearchFilter {
+    title:  String, 
+    level: String,
+    subject:  String,
+}
+
 type Candidate{
     id:ID!
     firstname: String
@@ -48,6 +85,7 @@ type Candidate{
     degree:String
     employers:[Employer]
 }
+
 type New{
     id:ID!
     title:  String 
@@ -96,14 +134,25 @@ type Query {
     getEmployers:[Employer!]!
     getJob(id: ID!): Job
     getJobs:[Job]
+    getJobTypes:[Job]
+    searchJobs(jobSearchFilter:JobSearchFilter, sortBy: SortBy ): [Job]
     getCandidate(id: ID!): Candidate
     getCandidates:[Candidate]
     getNews:[New]
+    getNew(id: ID!): New
+    getCourse(id: ID!): Course
+    getCourses:[Course]
+    getCourseLevel:[Course]
+    getCourseSubject:[Course]
+    searchCourses(courseSearchFilter:CourseSearchFilter, sortBy: SortBy ): [Course]
+    getProviders:[Provider]
+    getCoursesBySubject(subject:String, sortBy: SortBy ): [Course]
+
 }
 
 type Mutation {
     registerUser(registerInput: RegisterInput): User
-    loginUser(loginInput: LoginInput): User
+    loginUser(loginInput: LoginInput,sortBy: SortBy): User
     createEmployer(createEmployerInput:CreateEmployerInput):Employer
     createJob(createJobInput:CreateJobInput):Job
 }

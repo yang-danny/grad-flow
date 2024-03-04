@@ -1,0 +1,78 @@
+.course-grid{
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-Advent);
+.course-grid-box{
+    width: 1080px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .course-grid-title{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        h1{
+            color: var(--blue);
+            font-size: 36px;
+            font-weight:600 ;
+            } 
+            .result-diaplay{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 20px;
+            label{
+            color: var(--blue);
+            font-weight: 600;
+            font-size: 18px;
+            select{
+                width: 100px;
+                color: var(--grey);
+                border: 2px solid var(--card-color);
+                border-radius: 5px;
+                margin-left: 3px;
+                font-size: 16px;
+                height: 35px;
+            }    
+            }
+            .pagination {
+                
+                display: flex;
+                list-style: none;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                border-radius: 5px;
+                .page-num{
+                    padding: 5px 10px;
+                    cursor: pointer;
+                    color: var(--blue);
+                    font-size: 18px;
+                    border-radius: 5px;
+                    font-weight: 600;
+                     &:hover  {
+                    background-color: var(--blue);
+                   color: white;
+                }
+                }
+                .active{
+                    background-color: var(--blue);
+                    color: white;
+                }
+                
+            }   
+            }
+    }
+    .course-grid-title-bottom{
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap:20px;
+    }
+}
+}

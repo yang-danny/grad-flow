@@ -12,7 +12,30 @@ module.exports = {
           },
           async getJobs() {
             try {
-           const result = await Job.find().populate('employer').exec();
+            const result = await Job.find().populate('employer').exec();
+            return result
+            } catch (err) {
+              throw new ApolloError(err);
+            }
+          },
+          async getJobTypes() {
+            try {
+            const result = await Job.find();
+            return result
+            } catch (err) {
+              throw new ApolloError(err);
+            }
+          },
+          async searchJobs(_, {jobSearchFilter:{title,location, type},sortBy:{field,order}}) {
+            const sortObj = {}
+            sortObj[field] = order === 'ASC' ? 1 : -1
+            try {
+              let result = await Job.find().sort(sortObj).populate('employer').exec();
+              result=result.filter((job)=>{
+                return (job.title.toLocaleLowerCase().includes(title.toLocaleLowerCase()) 
+                     && job.location.toLocaleLowerCase().includes(location.toLocaleLowerCase())
+                     && job.type.toLocaleLowerCase().includes(type.toLocaleLowerCase()))
+              })
             return result
             } catch (err) {
               throw new ApolloError(err);

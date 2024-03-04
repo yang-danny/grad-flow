@@ -1,9 +1,7 @@
-import React from 'react'
 import { useParams } from 'react-router-dom';
 import {FETCH_JOB_BY_ID} from '../graphql/jobQueries'
 import { useQuery } from '@apollo/react-hooks';
 import Spinner from './Spinner';
-import { FiSearch,FiTag } from "react-icons/fi";
 import { MdOutlineLocationOn,MdMoney,MdOutlineStairs,MdSchedule } from "react-icons/md";
 import { BsBriefcase } from "react-icons/bs";
 import { IoShieldCheckmarkOutline } from "react-icons/io5"

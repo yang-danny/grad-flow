@@ -18,8 +18,12 @@
 @import "components/preparation";
 @import "components/download";
 @import "components/spinner";
-
+@import "components/coursecard";
+@import "components/coursegrid";
+@import "components/coursedetails";
 @import "pages/auth/login";
 @import "pages/auth/register";
 @import "pages/home/home";
 @import "pages/job/jobsearch";
+@import "pages/cvcl/cvcl";
+@import "pages/e-learning/e-learning";

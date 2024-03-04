@@ -1,6 +1,5 @@
 const Employer = require('../../models/Employer');
 const { ApolloError } = require('apollo-server-errors');
-// const jobs = require('./jobs');
 
 module.exports = {
     Query:{

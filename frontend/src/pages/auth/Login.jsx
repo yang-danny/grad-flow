@@ -6,8 +6,9 @@ import {LOGIN_USER} from '../../graphql/authMutations'
 import {useNavigate, Link} from 'react-router-dom'
 import { FiUsers,FiUser } from "react-icons/fi";
 import { CiLock } from "react-icons/ci";
+import Spinner from '../../components/Spinner'
 
-const Login = (props) => {
+const Login = () => {
   const context= useContext(AuthContext)
     let navigate = useNavigate()
     const [errors, setErrors] = useState([])
@@ -28,7 +29,7 @@ const Login = (props) => {
         },
         variables:{loginInput:values}
     })
-
+    if (loading) return <Spinner />;
   return (
     <div className='login'>
       <div className="login-box">

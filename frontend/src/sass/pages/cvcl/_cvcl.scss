@@ -1,0 +1,306 @@
+.cvcl  {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-Advent);
+
+    .cvcl-box{
+    width: 1080px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .cv, .checker, .cl, .interview{
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+        position:relative;
+        display: flex;
+        border-radius: 10px;
+        .cv-left, .cl-left{
+            width: 50%;
+            margin: 30px 0 30px 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+         h1{
+            background: linear-gradient(90deg, #E7267A -2.12%, #2B4B9B 89.03%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+            letter-spacing: 7px;
+        }   
+        .steps{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            margin-top: 20px;
+            p{
+                color: var(--grey);
+                font-size: 16px;
+                font-weight: 500;
+                font-family: var(--font-Actor);
+                margin-bottom: 10px;
+            }
+            .one, .two, .three{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                margin-top: 5px;
+                h2{
+                    color: var(--pink);
+                    margin-right: 20px;
+                    font-family: var(--font-Aclonica);
+                    font-size: 40px;
+                }
+                p{
+                    color: var(--blue);
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+            }
+            .star-btn{
+                position: relative;
+                .icon{
+                    position: absolute;
+                    top: 3px;
+                    left: 10px;
+                    color:white
+                }
+            button{
+                width: 120px;
+                height: 35px;
+                background-color: var(--pink);
+                color: white;
+                font-family: var(--font-Almarai);
+                font-weight: 600;
+                font-size: 15px;
+                text-align: center;
+                line-height: 15px;
+                border: none;
+            }    
+            }
+            
+        }
+        }
+        .checker-right{
+            width: 60%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            h1{
+              
+                background: linear-gradient(90deg, #E7267A -2.12%, #2B4B9B 89.03%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 600;
+                letter-spacing: 7px;
+            }   
+            h2{
+               
+                background: linear-gradient(90deg, #E7267A -2.12%, #2B4B9B 89.03%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 600;
+                letter-spacing: 7px;
+                font-size: 36px;
+            }
+            p{  
+                width: 70%;
+                margin: 20px;
+                font-family: var(--font-Almarai);
+                color: var(--grey);
+            }
+            .upload-btn{
+                position: relative;
+                margin-top: 20px;
+                cursor: pointer;
+                .icon{
+                    position: absolute;
+                    top: 3px;
+                    left: 10px;
+                    color:white
+                }
+            button{
+                width: 200px;
+                height: 35px;
+                background-color: var(--pink);
+                color: white;
+                font-family: var(--font-Almarai);
+                font-weight: 600;
+                font-size: 15px;
+                text-align: center;
+                line-height: 15px;
+                border: none;
+            }    
+            }
+        }
+        .interview-right{
+            width: 60%;
+            margin: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            p{
+                color: var(--grey);
+                font-size: 16px;
+                font-weight: 500;
+                font-family: var(--font-Actor);
+            }
+            h1{
+                background: linear-gradient(90deg, #E7267A -2.12%, #2B4B9B 89.03%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 600;
+                letter-spacing: 7px;
+                font-size: 46px;
+            }   
+            .steps{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                margin-top: 20px;
+                p{
+                    color: var(--grey);
+                    font-size: 16px;
+                    font-weight: 500;
+                    font-family: var(--font-Actor);
+                    margin-bottom: 10px;
+                }
+                .one, .two, .three{
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    margin-top: 5px;
+                    h2{
+                        color: var(--pink);
+                        margin-right: 20px;
+                        font-family: var(--font-Aclonica);
+                        font-size: 40px;
+                    }
+                    p{
+                        color: var(--blue);
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                }
+ 
+            }
+        }
+        .cv-right, .cl-right{
+            margin-right: 60px;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .checker-left{
+             width:40%;
+             height: auto;
+            img{
+                width: 100%;
+                border-radius: 10px;
+            }
+         }
+         .interview-left{
+            margin-left: 60px;
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+    }
+    .cv::before{
+        content:'';
+        position:absolute;
+        z-index:-1;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        background:url(../assets/cv.jpg);
+        filter:blur(2px) contrast(0.8) brightness(1.4) ;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.6;
+        border-radius: 10px;
+    }
+    .cl::before{
+        content:'';
+        position:absolute;
+        z-index:-1;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        background:url(../assets/cl.jpg);
+        filter:blur(2px);
+        background-size: cover;
+        background-position: center;
+        opacity: 0.6;
+        border-radius: 10px;
+    }
+    .checker::before{
+    content:'';
+        position:absolute;
+        z-index:-1;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        background:url(../assets/cv-review.jpg);
+        filter:blur(2px);
+        background-size: cover;
+        background-position: center;
+        opacity: 0.6;
+        border-radius: 10px;
+    }
+    .interview::before{
+    content:'';
+        position:absolute;
+        z-index:-1;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        background:url(../assets/pre-interview.jpg);
+        filter:blur(2px);
+        background-size: cover;
+        background-position: center;
+        opacity: 0.6;
+        border-radius: 10px;
+    }
+}
+}
+@media screen and (min-width: 280px) and (max-width: 1080px)  {
+    .cvcl{
+     .cvcl-box{
+        width: 100%;
+        padding: 10px;
+    .cv, .checker, .cl, .interview{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        .cv-left, .cv-right, .checker-right, .checker-left, .cl-left, .cl-right, .interview-left, .interview-right{
+            width: 100%;
+            margin: 10px;
+            padding: 10px;
+        }
+       
+    }
+    }    
+    }
+   
+}

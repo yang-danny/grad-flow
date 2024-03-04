@@ -88,8 +88,8 @@ const JobSearchResult = () => {
          </select>
          </label>
          </div>
-     </div>
-     <div className="jobsearch-result-bottom">
+          </div>
+        <div className="jobsearch-result-bottom">
         {loading && <Spinner />}
         {error && <p>Something Went Wrong</p>}
         {currentItems?.map((job)=>(

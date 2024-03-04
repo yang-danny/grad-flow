@@ -1,0 +1,84 @@
+.course-details{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    .course-details-box{
+        margin-top: 10px;
+        width: 1080px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        background-color: var(--card-color);
+        border-radius: 10px;
+        .course-details-left{
+            width: 70%;
+            height: auto;
+            margin: 10px;
+            h2{
+                font-family:var(--font-Actor);
+                color: var(--purple);
+                font-weight: 600;
+                margin: 10px;
+                font-size: 28px;
+            }
+            p{
+                color: var(--grey);
+                margin: 10px;
+            }
+            .tags{
+                margin: 10px 20px;
+                display: grid;
+                grid-template-columns: auto ;
+                font-family: var(--font-Advent);
+                .level, .subject, .type, .duration, .skills, .provider{
+                    margin: 5px;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    gap: 10px;
+                    color: var(--blue);
+                    font-size: 20px;
+                    font-weight: 600;
+                   .icons{
+                    color: var(--grey);
+                }   
+                img{
+                    width: auto;
+                    height: 30px;
+                }
+            }
+        }
+        }
+        .course-details-right{
+            width: 30%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+            img{
+                margin: 10px;
+                width: 300px;
+                height: auto;
+            }
+            .launch{
+                position: relative;
+                margin-top: 80px;
+                .play{
+                    position: absolute;
+                    top: 8px;
+                    left: 50px;
+                    color: white;
+                }
+                button{
+                    width: 300px;
+                    background-color: var(--pink);
+                    color: white;
+                    font-weight: 600;
+            } 
+            }
+           
+        }
+    }
+}

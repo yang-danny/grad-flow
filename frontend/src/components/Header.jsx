@@ -30,7 +30,7 @@ const dropMenu=[
     },
     {
         title:"CV & CL",
-        path:"/cv",
+        path:"/cvcl",
         subMenu: [
             {
                 title:"CV Builder",
@@ -56,15 +56,15 @@ const dropMenu=[
         subMenu: [
             {
                 title:"Career Skills",
-                path:"career-skills"
+                path:"career"
             },
             {
                 title:"IT Skills",
-                path:"it-skills"
+                path:"it"
             },
             {
                 title:"Business Skills",
-                path:"business-skills"
+                path:"business"
             },
         ]
     },
