@@ -21,9 +21,7 @@ const CourseCard = ({course}) => {
     <div className="subject"><MdSubject className='icons' size={20}/>{course.subject}</div>
   <div className="type"><PiBookOpenTextLight className='icons' size={20}/>{course.type}</div>
   <div className="duration"><MdOutlineTimer className='icons' size={20}/>{course.duration}</div>
-  
   </div>
-  
 </div>
   )
 }

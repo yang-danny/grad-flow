@@ -5,7 +5,6 @@
     display: flex;
     justify-content: center;
     font-family: var(--font-Advent);
-
     .e-learning-box{
     width: 1080px;
     height: auto;
@@ -30,7 +29,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-
         h1{
             background: linear-gradient(90deg, #E7267A -2.12%, #2B4B9B 89.03%);
             background-clip: text;
@@ -39,7 +37,6 @@
             font-weight: 600;
             letter-spacing: 7px;
         }
-
     }
     .search-bar{
         width: 80%;
@@ -134,7 +131,6 @@
     .e-learning-search-result{
         width: 100%;
         margin-top: 10px;
-
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -166,8 +162,7 @@
                     height: 35px;
                 }    
                 }
-                .pagination {
-                    
+                .pagination {  
                     display: flex;
                     list-style: none;
                     justify-content: center;
@@ -189,8 +184,7 @@
                     .active{
                         background-color: var(--blue);
                         color: white;
-                    }
-                    
+                    } 
                 }   
                 }
         }
@@ -201,4 +195,57 @@
             gap:20px;
         }
     }
+}
+@media screen and (min-width: 280px) and (max-width: 1080px) {
+.e-learning{
+    height: auto;
+    margin: 10px;
+    .e-learning-box{
+        width: 100%;
+        margin: 10px;
+        justify-content: center;
+        .e-learning-search{
+            .title{
+                h1{
+                    margin: 10px;
+                    font-size: 40px;
+                }
+            }
+            .search-bar{
+            width: 100%;
+            display: block;
+            margin: 10px;
+            .course, .level, .subject{
+            padding-left: 15%;
+            padding-right: 15%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            }
+            .search-btn{
+            display: flex;
+            justify-content: center;
+                button{
+                 width: 70%;
+                }
+            }
+            }
+            .skill-info{
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: start;
+             .career, .it, .business, .resources{
+            width: 100%;
+             }
+            }
+        }
+        .e-learning-search-result{
+            .e-learning-search-result-bottom{
+            grid-template-columns: auto ;
+            gap:10px;
+            }
+        }
+    }
+}
 }

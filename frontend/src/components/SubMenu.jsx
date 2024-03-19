@@ -1,6 +1,5 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
-
+import PropTypes from 'prop-types';
 const SubMenu = ({menu}) => {
   return (
 <ul className="menu">
@@ -14,5 +13,7 @@ const SubMenu = ({menu}) => {
 </ul>
   )
 }
-
+SubMenu.propTypes = {
+  menu: PropTypes.object
+}
 export default SubMenu

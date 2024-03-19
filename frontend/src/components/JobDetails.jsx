@@ -6,6 +6,7 @@ import { MdOutlineLocationOn,MdMoney,MdOutlineStairs,MdSchedule } from "react-ic
 import { BsBriefcase } from "react-icons/bs";
 import { IoShieldCheckmarkOutline } from "react-icons/io5"
 import { RiCalendarCloseLine } from "react-icons/ri";
+import { FiTag } from "react-icons/fi";
 const JobDetails = () => {
     const {jobId} =useParams()
     const { loading, error, data} =useQuery(FETCH_JOB_BY_ID, { variables: { jobId } })
@@ -21,23 +22,26 @@ const JobDetails = () => {
                     <div className="info-left">
                       <img src={job.employer.logo} alt="" />
                     <h2>{job.title}</h2>
-                     <h3>{job.employer.name}</h3>      
+                     <h3>{job.employer.name}</h3>     
+                     <div className="recruiter">
+                      <h2>Recruited By:</h2>
+                      <img src={job.recruiter.logo} alt="" />
+                    </div> 
                     </div>
                  <div className="info-right">
                     <button className='btn-apply'>Apply</button>
                     <button className='btn-save'>Save</button>
                     <button className='btn-forward'>Forward</button>
                  </div>
-                </div>
-                   
+                </div>            
         <div className="location">
-             <MdOutlineLocationOn size={22}/><p>{job.location}</p>
+             <MdOutlineLocationOn size={22}/><p>Location: {job.location}</p>
         </div>
-              <div className="category">
-              <FiTag size={20}/><p>{job.category}</p>
-              </div>
-              <div className="salary">
-              <MdMoney size={20}/> <p>Salary: ${job.salary}</p>
+                <div className="category">
+                <FiTag size={20}/><p>Job Category: {job.category}</p>
+                </div>
+                <div className="salary">
+                <MdMoney size={20}/> <p>Salary: ${job.salary}</p>
                 </div>
                 <div className="type">
                 <BsBriefcase size={20}/> <p>Job Type: {job.type}</p>
@@ -60,7 +64,6 @@ const JobDetails = () => {
             <p>{job.description}</p>
             </div>
         </div>
-      
     </div>
   )
 }

@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaArrowRight } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import Spinner from './Spinner';
@@ -22,7 +21,6 @@ if (error) return <p>Something Went Wrong</p>;
         ))}
             </div>
         </div>
-
     </div>
   )
 }

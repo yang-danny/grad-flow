@@ -85,33 +85,31 @@
    @media screen and (min-width: 280px) and (max-width: 1080px)  {
        .register{
         width: 100%;
-    height: auto;
-    margin: 0;
-    .register-box{
-      width: 100%;
-      height: auto;
-      border-radius: 0;
-     .info{
-      margin: 20px;
-           width: 400px;
-           height: auto;
-           gap: 15px;
-           margin-top: 10px;
-           .username, .password, .email, .confirm{
+        height: auto;
+        margin: 0;
+        .register-box{
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+          .info{
+            margin: 20px;
+            width: 400px;
+            height: auto;
+            gap: 15px;
+            margin-top: 10px;
+          .username, .password, .email, .confirm{
                i{
-              position: absolute;
-              right: 5px;
-               }
-               }
-               .function-links{
+                position: absolute;
+                right: 5px;
+                 }
+          }
+          .function-links{
                 margin-bottom: 10px;
-                }
-                .error{
+          }
+          .error{
                   margin-bottom: 10px;
-              }
+          }
         } 
     }  
-        
-       }
-       
+       }     
    }

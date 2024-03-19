@@ -1,10 +1,9 @@
-import React from 'react'
 import { useParams } from 'react-router-dom';
 import Spinner from './Spinner';
 import { useQuery } from '@apollo/react-hooks';
 import {FETCH_CANDIDATE_BY_ID} from '../graphql/candidateQueries'
 import EmployerCard from './EmployerCard';
-const CandidateDetail = () => {
+const CandidateDetails = () => {
     const {candidateId} =useParams()
     const { loading, error, data} =useQuery(FETCH_CANDIDATE_BY_ID, { variables: { candidateId } })
     if (loading) return <Spinner />;
@@ -46,4 +45,4 @@ const CandidateDetail = () => {
   )
 }
 
-export default CandidateDetail
+export default CandidateDetails

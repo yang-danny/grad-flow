@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import tech from '../assets/tech-rect.jpg'
 import { FiSearch,FiTag } from "react-icons/fi";
 import { MdOutlineLocationOn } from "react-icons/md";
@@ -8,16 +8,16 @@ import { FETCH_JOB_TYPES } from '../graphql/jobQueries';
 const Banner = () => {
   const navigate = useNavigate();
   const [title, setTitle] = useState('')
-    const [location, setLocation] = useState('')
-    const [type, setType] = useState('')
-    const [jobSearchFilter, setJobSearchFilter]=useState({ 
+  const [location, setLocation] = useState('')
+  const [type, setType] = useState('')
+  const [jobSearchFilter, setJobSearchFilter]=useState({ 
     title:"", 
     location:"",
     type:""
     })
-    const { data} =useQuery(FETCH_JOB_TYPES)
-    const unique = data?.getJobTypes.filter((obj, index) => {
-      return index === data?.getJobTypes.findIndex(o => obj.type === o.type);
+  const { data} =useQuery(FETCH_JOB_TYPES)
+  const unique = data?.getJobTypes.filter((obj, index) => {
+    return index === data?.getJobTypes.findIndex(o => obj.type === o.type);
   });
   const updateSearchFilter=() => {
     jobSearchFilter.title=title;
@@ -26,7 +26,6 @@ const Banner = () => {
     setJobSearchFilter({...jobSearchFilter})
     navigate('/jobsearchresult',{state:jobSearchFilter})
   }
-
   return (
     <div className='banner'>
         <div className="banner-box">
@@ -66,7 +65,6 @@ const Banner = () => {
             ))}
             </select>
             </div>
-            
             <button onClick={updateSearchFilter}>Find Jobs</button>
         </div>
         <p>Popular Searches:         Designer, Developer, Web, Engineer, Accountant, Sales...</p>

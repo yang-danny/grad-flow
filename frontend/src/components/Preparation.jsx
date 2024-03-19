@@ -1,4 +1,3 @@
-import React from 'react'
 import interview from '../assets/interview.jpg'
 const Preparation = () => {
   return (
@@ -26,7 +25,6 @@ const Preparation = () => {
             </dir>
             </dir>
         </div>
-        
     </div>
   )
 }

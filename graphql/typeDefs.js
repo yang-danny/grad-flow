@@ -5,12 +5,10 @@ enum Order {
   ASC
   DESC
 }
-
 input SortBy {
   field: String
   order: Order
 }
-
 type User {
     username: String
     email: String
@@ -28,6 +26,16 @@ type Employer {
     industry: String
     logo: String
 }
+type Recruiter {
+    id:ID!
+    name: String
+    logo: String
+    service:[String]
+    location: String
+    website: String
+    phone: String
+    email: String
+}
 type Job {
     id:ID!
     title:  String 
@@ -42,6 +50,7 @@ type Job {
     closeDate: String
     description:  String 
     employer:Employer
+    recruiter:Recruiter
 }
 type Provider {
     name: String
@@ -69,7 +78,16 @@ input CourseSearchFilter {
     level: String,
     subject:  String,
 }
-
+input EmployerSearchFilter{
+    name: String,
+    location: String,
+    industry: String,
+}
+input RecruiterSearchFilter{
+    name: String,
+    location: String,
+    service: String,
+}
 type Candidate{
     id:ID!
     firstname: String
@@ -85,7 +103,6 @@ type Candidate{
     degree:String
     employers:[Employer]
 }
-
 type New{
     id:ID!
     title:  String 
@@ -101,7 +118,6 @@ input RegisterInput {
     password: String,
     confirmPassword:String 
 }
-
 input LoginInput {
     username: String,
     password: String 
@@ -131,9 +147,14 @@ input CreateJobInput {
   company: String 
 }
 type Query {
-    getEmployers:[Employer!]!
+    getEmployers:[Employer]
+    getEmployer(id:ID!):Employer
+    searchEmployers(employerSearchFilter:EmployerSearchFilter, sortBy: SortBy):[Employer]
+    getEmployerIndustry:[Employer]
     getJob(id: ID!): Job
     getJobs:[Job]
+    getEmployerJobs(employer:ID!):[Job]
+    getRecruiterJobs(recruiter:ID!):[Job]
     getJobTypes:[Job]
     searchJobs(jobSearchFilter:JobSearchFilter, sortBy: SortBy ): [Job]
     getCandidate(id: ID!): Candidate
@@ -147,9 +168,11 @@ type Query {
     searchCourses(courseSearchFilter:CourseSearchFilter, sortBy: SortBy ): [Course]
     getProviders:[Provider]
     getCoursesBySubject(subject:String, sortBy: SortBy ): [Course]
-
+    getRecruiters:[Recruiter]
+    getRecruiter(id:ID!): Recruiter
+    searchRecruiters(recruiterSearchFilter:RecruiterSearchFilter, sortBy: SortBy):[Recruiter]
+    getServices:[Recruiter]
 }
-
 type Mutation {
     registerUser(registerInput: RegisterInput): User
     loginUser(loginInput: LoginInput,sortBy: SortBy): User

@@ -17,7 +17,6 @@ header {
     font-family: var(--font-Advent);
     position: relative;
   .brand-container {
-
     .brand {
       img {
          width: 85px;
@@ -25,9 +24,7 @@ header {
          margin-left: 50px;
       }
     }
-    
   }
-  
   .links-container {
     position: fixed;
     max-width: 600px;
@@ -40,7 +37,7 @@ header {
       justify-content: center;
       font-weight: 800;
       p{
-        color: var(--pink);
+      color: var(--pink);
       font-size: 20px;
       margin: 5px;
       }
@@ -129,7 +126,6 @@ header {
                 transform: scaleY(1);
                 opacity: 1;
               }
-            
             }
             &:hover ~.menu-icon{
                 transform: rotate(180deg);
@@ -138,8 +134,7 @@ header {
             }
     } 
     .menu-icon{
-        margin-top: 5px;
-        
+        margin-top: 5px; 
     }
         }
         .sub-menu{
@@ -154,7 +149,6 @@ header {
                 visibility: none;
                 opacity: 0;
                 transition: all 500ms ease-in-out;
-
                 .sub-links{
                     color: var(--blue);
                     font-weight: 600;
@@ -175,20 +169,15 @@ header {
                     }
                   &:hover::after{
                     width: 100%;
-                  }
-                    
+                  } 
                 }
             }
-        }
-      
+        } 
 }
     }
-   
   }
-  
   .bar-menu{
-    display: none;
-       
+    display: none;     
   }
 }
 @media screen and (min-width: 280px) and (max-width: 1080px) {
@@ -228,14 +217,11 @@ header {
         li{
           .nav-menu{
                .link {
-
                    &:hover ~.menu-icon{
                   transform: rotate(-90deg);
                   transition: 1s;
-                  margin-top: 0px;
-              
-                }
-             
+                  margin-top: 0px;             
+                }             
             } 
           }        
   }

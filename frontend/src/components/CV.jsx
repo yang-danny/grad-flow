@@ -1,4 +1,3 @@
-import React from 'react'
 import cv from '../assets/cv.png'
 const CV = () => {
   return (
@@ -21,7 +20,6 @@ const CV = () => {
             <p>LinkedIn</p>
             </div>
         </dir>
-            
         </dir>
         <dir className="right">
            <img src={cv} alt="" />

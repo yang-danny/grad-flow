@@ -8,7 +8,7 @@
         display: flex;
         justify-content: start;
         .company-logo{
-            margin: 20px;
+            margin: 10px;
             width: 55px;
             height: 55px;
             img{
@@ -22,14 +22,21 @@
                 color: var(--blue);
                 font-weight: 500;
             }
-            p{
+            .location{
+                display: flex;
+                align-items: center;
+                .icons{
+                    color: var(--grey);
+                }
+                p{
                 font-family:var(--font-Actor);
                 color: var(--grey);
-            }
+            } 
+            }  
         }
     }
     .jobcard-mid {
-        margin-left: 20px;
+        margin: 10px;
         font-family:var(--font-Actor);
        .job-title{
             color: var(--purple);
@@ -44,7 +51,7 @@
         font-family:var(--font-Actor);
         display: flex;
         justify-content: space-between;
-        margin-left: 20px;
+        margin-left: 10px;
         margin-top: 20px;
         padding-bottom: 20px;
         .category {
@@ -58,7 +65,7 @@
             color: var(--blue);
         }
         .type {
-            margin-right: 20px;
+            margin-right: 10px;
             width: 82px;
             height: 30px;
             border: 1px solid var(--pink);

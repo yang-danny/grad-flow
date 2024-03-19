@@ -11,6 +11,37 @@ module.exports = {
               throw new ApolloError(err);
             }
           },
+          async getEmployer(parent,args,context) {
+            try {
+           const result = await Employer.findById(args.id);
+            return result
+            } catch (err) {
+              throw new ApolloError(err);
+            }
+          },
+          async searchEmployers(_, {employerSearchFilter:{name,location, industry},sortBy:{field,order}}) {
+            const sortObj = {}
+            sortObj[field] = order === 'ASC' ? 1 : -1
+            try {
+              let result = await Employer.find().sort(sortObj);
+              result=result.filter((employer)=>{
+                return (employer.name.toLocaleLowerCase().includes(name.toLocaleLowerCase()) 
+                     && employer.location.toLocaleLowerCase().includes(location.toLocaleLowerCase())
+                     && employer.industry.toLocaleLowerCase().includes(industry.toLocaleLowerCase()))
+              })
+            return result
+            } catch (err) {
+              throw new ApolloError(err);
+            }
+          },
+          async getEmployerIndustry() {
+            try {
+            const result = await Employer.find();
+            return result
+            } catch (err) {
+              throw new ApolloError(err);
+            }
+          },
     },
 
     Mutation: {

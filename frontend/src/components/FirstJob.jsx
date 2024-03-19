@@ -1,4 +1,3 @@
-import React from 'react'
 import steps from '../assets/3steps.jpg'
 const FirstJob = () => {
   return (
@@ -26,7 +25,6 @@ const FirstJob = () => {
             </dir>
             </dir>
         </div>
-        
     </div>
   )
 }

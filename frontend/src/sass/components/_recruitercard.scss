@@ -1,0 +1,45 @@
+.recruiter-card-box{
+    width: 255px;
+    background-color: var(--card-color);
+    border-radius: 10px;
+    margin: 10px;
+    .recruiter-card-top{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        .company-logo{
+            margin: 20px;
+            width: 55px;
+            height: 55px;
+            img{
+                width: 55px;
+                height: auto;
+            }
+        }
+        .company-info{
+            margin-top: 15px;
+            .recruiter-name{
+                font-size: 22px;
+                color: var(--blue);
+                font-weight: 500;
+            }
+            p{
+                font-family:var(--font-Actor);
+                color: var(--grey);
+            }
+        }
+    }
+.employercard-mid{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-family:var(--font-Actor);
+    h3{
+        color: var(--purple);
+        font-weight: 500;
+        font-size: 22px;
+    }
+        p{
+         color: var(--grey);
+        }
+}
+}

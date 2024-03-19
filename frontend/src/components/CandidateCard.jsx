@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 const CandidateCard = ({candidate}) => {
@@ -11,14 +10,12 @@ const CandidateCard = ({candidate}) => {
        <div className="candidate-info">
        <h2>{candidate.firstname} {candidate.lastname}</h2>
       <p>{candidate.city}, {candidate.country}</p>  
-       </div>
-         
+       </div> 
         </div>
       <div className="card-right">
         <h2>{candidate.role}</h2>
         <Link to={`/candidate/${candidate.id}`}><button >View Profile</button></Link>
       </div>
-
     </div>
   )
 }

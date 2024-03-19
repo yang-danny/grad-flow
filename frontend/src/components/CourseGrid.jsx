@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import ReactPaginate from 'react-paginate';
 import CourseCard from './CourseCard';
 import PropTypes from 'prop-types';
@@ -6,7 +6,6 @@ const CourseGrid = ({items}) => {
     const skills= items[0].subject
     const [sort, setSort] = useState('Title: A-Z')
     let arrayForSort= [...items]
-    
     const [currentItems, setCurrentItems] = useState([])
     const [pageCount, setPageCount] = useState(0)
     const [itemOffset, setItemOffset] = useState(0);
@@ -79,8 +78,7 @@ const CourseGrid = ({items}) => {
          </label>
          </div>
       </div>
-    <div className="course-grid-title-bottom">
-
+    <div className="course-grid-bottom">
         {currentItems.map((course)=>(
             <CourseCard course={course} key ={course.id} />
         ))}

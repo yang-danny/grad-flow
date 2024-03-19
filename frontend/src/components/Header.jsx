@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import { useState, useContext } from 'react'
 import logo from '../assets/logo.png'
 import { Link,useNavigate } from 'react-router-dom'
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -20,11 +20,11 @@ const dropMenu=[
             },
             {
                 title:"Research Employers",
-                path:"employers"
+                path:"researchemployers"
             },
             {
                 title:"Find Recruiters",
-                path:"recruiters"
+                path:"findrecruiter"
             },
         ]
     },
@@ -94,23 +94,22 @@ const Header = () => {
       logout()
       navigate('/')
     }
-const [navState, setNavState] = useState(false);
-const [scrollPage, setScrollPage] = useState(false)  
-const fixNavbar=()=>{
+    const [navState, setNavState] = useState(false);
+    const [scrollPage, setScrollPage] = useState(false)  
+    const fixNavbar=()=>{
     if (window.scrollY>50) {
       setScrollPage(true);
     } else {
        setScrollPage(false)
     }
-  }
-  window.addEventListener("scroll", fixNavbar)
+    }
+    window.addEventListener("scroll", fixNavbar)
 return (
 <header className={scrollPage? "fixed": ''}>
     <div className="brand-container">
         <div className="brand">
         <Link to='/'><img src={logo}/></Link>
         </div>
-
     </div>
     <div className={`links-container ${navState ? "nav-visible" : ""}`}>
     <ul className="links">
@@ -130,7 +129,6 @@ return (
                     </li>
                 ))}
     </ul>
-  
         {user? (
             <div className='logged'>
             <p>Hi, {user.username}!</p>
@@ -142,19 +140,14 @@ return (
       <span className='auth-links' >&#47;</span>
       <Link className='auth-links' to='/register'>Register</Link>
       </div>
-        )}
-     
-    
+        )}    
 </div>
-  
-      
       <span className='bar-menu'>
         {navState?(
             <AiOutlineClose onClick={() => setNavState(false)} />
         ):(
             <AiOutlineBars onClick={() => setNavState(true)}/>
         )}
-        
       </span>
 </header>
 )

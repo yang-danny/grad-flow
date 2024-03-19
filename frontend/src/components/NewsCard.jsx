@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 const NewsCard = ({news}) => {
@@ -8,12 +7,12 @@ const NewsCard = ({news}) => {
         <div className="photo">
           <img src={news.photo} alt="" />   
         </div>
-   <div className="news-info">
-   <p>{news.publishDate}</p> 
-   <h2>{news.title}</h2>
-   </div>
-</div>
-</Link>
+        <div className="news-info">
+        <p>{news.publishDate}</p> 
+        <h2>{news.title}</h2>
+        </div>
+    </div>
+    </Link>
   )
 }
 NewsCard.propTypes = {

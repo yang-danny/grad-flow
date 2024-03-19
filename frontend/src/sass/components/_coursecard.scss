@@ -2,12 +2,10 @@
     width: 100%;
     background-color: var(--card-color);
     border-radius: 10px;
-
     .coursecard-top{
         width: 100%;
         display: flex;
         justify-content: center;
-     
         img{
             width: 100%;
             height: auto;
@@ -54,9 +52,6 @@
            .icons{
             color: var(--grey);
         }  
-       
         }
-       
-       
     }
 }

@@ -24,7 +24,6 @@ const CVCL = () => {
                 <TbBrandYoutubeFilled size={28} className='icon'/>
                 <button>Start</button>
                 </div>
-                
             </dir>
         </div>
    <div className="cv-right">
@@ -36,14 +35,14 @@ const CVCL = () => {
         <img src={checker} alt="" />
         </div>
    <div className="checker-right">
-  <h2>Is your CV good enough?</h2>
-  <h1>Try AI CV Checker</h1>
-  <p>It scores your CV against more than 50 checks that commonly trip up an ATS, annoy a hiring manager to get your CV deprioritised.</p>
-  <div className="upload-btn">
+    <h2>Is your CV good enough?</h2>
+    <h1>Try AI CV Checker</h1>
+    <p>It scores your CV against more than 50 checks that commonly trip up an ATS, annoy a hiring manager to get your CV deprioritised.</p>
+    <div className="upload-btn">
                 <TbUpload size={28} className='icon'/>
                 <button>Upload Your CV</button>
                 </div>
-   </div>
+    </div>
     </div>
     <div className="cl">
         <div className="cl-left">
@@ -64,7 +63,6 @@ const CVCL = () => {
     <div className="interview">
         <div className="interview-left">
         <iframe width="480" height="260" src="https://www.youtube.com/embed/qpkegRmPgis?si=biZgowAzYRL4S-RX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
         </div>
    <div className="interview-right">
    <h1>Interview Preparation</h1>
@@ -82,7 +80,10 @@ const CVCL = () => {
                 <h2>3</h2>
                 <p>Stay Update & Follow Up</p>
                 </div>
-              
+                <div className="star-btn">
+                <TbBrandYoutubeFilled size={28} className='icon'/>
+                <button>Start</button>
+                </div>
             </dir>
      </div>
     </div>

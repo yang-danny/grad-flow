@@ -1,7 +1,5 @@
-import React from 'react'
 import jobapp from '../assets/job-app.png'
 import { MdScreenSearchDesktop,MdOutlineEventAvailable,MdMailOutline } from "react-icons/md";
-import { FaRegPenToSquare } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import apple from '../assets/apple.png';
 import google from '../assets/google.png'
@@ -39,8 +37,7 @@ const Download = () => {
                 <Link ><img src={google} alt=''></img></Link>
             </div>
             </dir>
-        </div>
-        
+        </div>   
     </div>
   )
 }

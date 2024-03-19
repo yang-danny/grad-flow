@@ -3,14 +3,12 @@
     height: auto;
     display: flex;
     justify-content: center;
-    
     font-family:var(--font-Actor);
     .candidate-details-box{
     width: 1080px;
     background-color: var(--card-color);
     border-radius: 10px;
     margin-top: 10px;
-   
     .candidate-info-box{
         width: auto;
         padding: 20px;
@@ -31,7 +29,6 @@
             h3{
                 color:var(--purple);
                 font-weight: 500;
-                
             }
             p{
                 color: var(--grey);
@@ -56,8 +53,7 @@
         .employer-container{
             margin-top: 30px;
             display: flex;
-            justify-content: center;
-            
+            justify-content: center; 
         }
     }
 }

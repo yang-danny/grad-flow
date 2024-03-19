@@ -4,14 +4,14 @@ import {FETCH_COURSE_BY_SUBJECT} from '../../graphql/courseQueries'
 import CourseGrid from '../../components/CourseGrid';
 const CareerSkills = () => {
    
-    const { loading, error, data } = useQuery(FETCH_COURSE_BY_SUBJECT,{ variables: {
+  const { loading, error, data } = useQuery(FETCH_COURSE_BY_SUBJECT,{ variables: {
         "subject": "Career",
         "sortBy":{"field":"title","order":"ASC"}
     }
   })
   if (loading) return <Spinner />;
   if (error) return <p>Something Went Wrong</p>;
-const items = data?.getCoursesBySubject
+  const items = data?.getCoursesBySubject
   return (
     <div>
       <CourseGrid items={items} />

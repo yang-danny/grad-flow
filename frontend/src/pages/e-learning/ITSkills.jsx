@@ -7,16 +7,15 @@ const ITSkills = () => {
         "subject": "IT",
         "sortBy":{"field":"title","order":"ASC"}
     }
-  })
+    })
   if (loading) return <Spinner />;
   if (error) return <p>Something Went Wrong</p>;
-const items = data?.getCoursesBySubject
+  const items = data?.getCoursesBySubject
   return (
     <div>
       <CourseGrid items={items} />
     </div>
   )
 }
-
 
 export default ITSkills

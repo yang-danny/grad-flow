@@ -1,4 +1,3 @@
-import React from 'react'
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import Spinner from './Spinner';
@@ -20,21 +19,17 @@ const NewsDetails = () => {
         <div className="author">
         <FaUserPen size={22} className='news-icons'/><h2>{news.author}</h2>
         </div>
-        
         <div className="tag">
         <FaTags size={22} className='news-icons'/><h3>{news.category}</h3>
         </div>
-        
         <div className="date">
         <FaCalendarDays size={22} className='news-icons'/><p>{news.publishDate}</p> 
-        </div>
-          
+        </div>  
         </div>
         <div className="news-photo">
             <img src={news.photo} alt="" />
         </div>    
         </div>
-        
         <div className="news-body">
           <p>{news.body}</p>   
         </div>

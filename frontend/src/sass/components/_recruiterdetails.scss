@@ -1,0 +1,118 @@
+.recruiter-details{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    .recruiter-details-box{
+        width: 1080px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        .recruiter-details-top{
+            width: 100%;
+            margin-top: 10px;
+            background-color: var(--card-color);
+            border-radius: 10px;
+            padding: 20px;
+            font-family:var(--font-Actor);
+            .company-info{
+                display: flex;
+                justify-content: space-between;
+                .info-left{
+                    img{
+                        width: 60px;
+                        height: auto;
+                    }
+                    h2{
+                        color: var(--purple);
+                        font-weight: 500;
+                    }
+                    ul{
+                        color: var(--blue);
+                        font-size: 22px;
+                        li{
+                            color: var(--grey);
+                            margin-left: 25px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .info-right{
+                    display: flex;
+                    flex-direction: column;
+                    .follow, .contact{
+                        display: flex;
+                        justify-content: center;
+                        position: relative;
+                        color: white;
+                    button{
+                        width: 120px;
+                        height: 35px;
+                        text-align: center;
+                        margin: 3px;
+                        border-radius: 5px;
+                        font-size: 16px;
+                        line-height:16px;
+                        color: white;
+                    }
+                    .icons{
+                    position: absolute;
+                    left: 10px;
+                    top: 10px;     
+                    }
+                    .btn-follow {
+                    background-color:  var(--purple);
+                    }
+                    .btn-contact {
+                    background-color: var(--pink);
+                    }
+                    }
+                }
+            }      
+            .location, .industry, .web, .email, .phone{
+                display: flex;
+                align-items: center;
+                color: var(--grey);
+                margin-top: 10px;
+            p{
+                margin-left: 5px;
+            }
+            }
+        }
+        .recruiter-details-bottom{
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 10px;
+            font-family:var(--font-Actor);
+            text-align: justify;
+            h2{
+                color: var(--purple);
+                margin-bottom: 10px;
+            }
+            .post-jobs-grid{
+                margin-left: -10px;
+               display: flex;
+               justify-content: start;
+            }
+        }
+    }
+}
+@media screen and (min-width: 280px) and (max-width: 1080px)  {
+.recruiter-details{
+   padding: 10px;
+    .recruiter-details-box{
+        margin: 10px;
+        width: 100%;
+        flex-direction: column;
+        .recruiter-details-bottom{
+            .post-jobs-grid{
+                margin: 0;
+               display: grid;
+               grid-template-columns: auto auto;
+            }
+        }
+    }
+   
+}
+}

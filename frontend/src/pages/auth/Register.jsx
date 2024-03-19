@@ -14,7 +14,7 @@ const Register = () => {
     let navigate = useNavigate()
     const [errors, setErrors] = useState([])
 
-       const registerUserCallback=()=>{
+    const registerUserCallback=()=>{
         registerUser()
     } 
     const {onChange, onSubmit, values}= useForm(registerUserCallback,{
@@ -41,7 +41,7 @@ const Register = () => {
       <div className="info">
       <div className="header">
           <h2>Register</h2>
-        <FiUserPlus size={32}/> 
+          <FiUserPlus size={32}/> 
       </div>
      <div className="username">
        <input
@@ -83,7 +83,6 @@ const Register = () => {
           />
           <i><TiTickOutline /></i>
          </div>
-          
           <button onClick={onSubmit}>
             Register
           </button>
@@ -94,17 +93,16 @@ const Register = () => {
         {errors.length > 0 && (
         <div className="error">
           <ul className="list">
-        {errors.map((error)=>{
-           return (
+            {errors.map((error)=>{
+             return (
             <li key={error}>{error.message}</li>
-           ) 
-        })}
+            ) 
+            })}
           </ul>
         </div>
       )}
       </div>  
       </div>
-      
     </div>
   )
 }

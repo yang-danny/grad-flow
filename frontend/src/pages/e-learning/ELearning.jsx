@@ -22,7 +22,7 @@ const ELearning = () => {
   const uniqueSubject = subjectResult.data?.getCourseSubject.filter((obj, index) => {
     return index === subjectResult.data?.getCourseSubject.findIndex(o => obj.subject === o.subject);
     });
-    const [getCourses, { loading, error, data }] = useLazyQuery(SEARCH_COURSES,{ variables: {
+  const [getCourses, { loading, error, data }] = useLazyQuery(SEARCH_COURSES,{ variables: {
       "courseSearchFilter":{
           "title":title,  
           "level": level,
@@ -30,9 +30,9 @@ const ELearning = () => {
       },
       "sortBy":{"field":field,"order":order}
   }
-});
-useEffect(() => {
- if(sort==='Title: A-Z'){
+  });
+  useEffect(() => {
+  if(sort==='Title: A-Z'){
    setField("title")
    setOrder("ASC")
    } else {
@@ -46,16 +46,15 @@ useEffect(() => {
    const [itemOffset, setItemOffset] = useState(0);
    const itemsPerPage=6
 
-   useEffect(() => {
+  useEffect(() => {
        if(items){
          const endOffset = itemOffset + itemsPerPage;
        setCurrentItems(items.slice(itemOffset, endOffset) );
        setPageCount(Math.ceil(items.length / itemsPerPage));  
        }
-       
    }, [itemOffset,itemsPerPage,items])
    
-   const handlePageClick = (event) => {
+  const handlePageClick = (event) => {
        const newOffset = (event.selected * itemsPerPage) % items.length
        setItemOffset(newOffset);
      };
@@ -70,7 +69,7 @@ useEffect(() => {
         <div className="course">
         <h2>Course</h2>
         <div className="input-box">
-          <FiSearch size={26} className='icons'/>
+            <FiSearch size={26} className='icons'/>
             <input type="text" id='title' 
             placeholder='Course titles, key words or company...  ' 
             required
@@ -78,7 +77,6 @@ useEffect(() => {
             onChange={(e) => setTitle(e.target.value)}
             />   
         </div>
-       
         </div>
         <div className="level">
            <h2>Level</h2> 
@@ -94,8 +92,7 @@ useEffect(() => {
             value={option.level}>{option.level}</option>
             ))}
             </select> 
-                </div>
-        
+          </div>
         </div>
         <div className="subject">
         <h2>Subject</h2>
@@ -105,24 +102,21 @@ useEffect(() => {
              value={subject}
              onChange={(e) => setSubject(e.target.value)}
             >
-              <option value="Course Subject">Course Subject</option>
+            <option value="Course Subject">Course Subject</option>
             {uniqueSubject?.map((option) => (
             <option key={option.id} 
             value={option.subject}>{option.subject}</option>
             ))}
             </select> 
         </div>
-        
         </div>
         <div className="search-btn">
             <button 
              onClick={getCourses}
             >Find Course</button>
         </div>
-
         </div>
         <div className="skill-info">
-          
           <div className="career">
             <h2>Career Skills</h2>
             <ul>
@@ -159,7 +153,6 @@ useEffect(() => {
               <li>Library Databases</li>
             </ul>
           </div>
-         
         </div>
     </div>
     {currentItems.length>0 ? (
@@ -201,7 +194,6 @@ useEffect(() => {
     </div>
     </div>
     ):(<></>)}
- 
   </div>
  </div>
   )

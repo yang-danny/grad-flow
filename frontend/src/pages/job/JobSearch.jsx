@@ -39,14 +39,13 @@ const JobSearch = () => {
         <div className="what">
         <h2>What</h2>
         <div className="input-box">
-          <FiSearch size={26} className='icons'/>
+            <FiSearch size={26} className='icons'/>
             <input type="text" id='title' 
             placeholder='Job titles, key words or company...  ' 
             required
             value={title|| ''}
             onChange={(e) => setTitle(e.target.value)}/>   
-        </div>
-       
+        </div>  
         </div>
         <div className="where">
            <h2>Where</h2> 
@@ -75,12 +74,10 @@ const JobSearch = () => {
             ))}
             </select> 
         </div>
-        
         </div>
         <div className="search-btn">
             <button onClick={updateSearchFilter}>Find Jobs</button>
         </div>
-
       </div>
       <div className="search-options">
         <div className="option">
@@ -134,7 +131,6 @@ const JobSearch = () => {
         </div>
       </div>
       </div>
-
   )
 }
 

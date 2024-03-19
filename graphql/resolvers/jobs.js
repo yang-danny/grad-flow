@@ -4,7 +4,25 @@ module.exports = {
     Query:{
         async getJob(parent,args,context) {
             try {
-           const result = await Job.findById(args.id).populate('employer').exec();
+           const result = await Job.findById(args.id).populate('employer').populate('recruiter').exec();
+            return result
+            } catch (err) {
+              throw new ApolloError(err);
+            }
+          },
+          async getEmployerJobs(parent,args,context) {
+           
+            try {
+           const result = await Job.find({employer:args.employer}).populate('recruiter').populate('employer').exec();
+            return result
+            } catch (err) {
+              throw new ApolloError(err);
+            }
+          },
+          async getRecruiterJobs(parent,args,context) {
+           
+            try {
+           const result = await Job.find({recruiter:args.recruiter}).populate('recruiter').populate('employer').exec();
             return result
             } catch (err) {
               throw new ApolloError(err);
@@ -12,7 +30,7 @@ module.exports = {
           },
           async getJobs() {
             try {
-            const result = await Job.find().populate('employer').exec();
+            const result = await Job.find().populate('employer').populate('recruiter').exec();
             return result
             } catch (err) {
               throw new ApolloError(err);

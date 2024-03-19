@@ -13,7 +13,9 @@ const jobSchema = new Schema({
   closeDate:{type: String},
   description: { type: String },
   employer: { type: Schema.Types.ObjectId,
-    ref: 'Employer' }
+    ref: 'Employer' },
+    recruiter: { type: Schema.Types.ObjectId,
+      ref: 'Recruiter' },
 });
 
 module.exports = model("Job", jobSchema);

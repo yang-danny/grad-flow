@@ -78,7 +78,20 @@
                     font-weight: 600;
             } 
             }
-           
         }
     }
+}
+@media screen and (min-width: 280px) and (max-width: 1080px) {
+    .course-details{
+        .course-details-box{
+            margin: 10px;
+            width: 100%;
+            flex-direction: column;
+            .course-details-right{
+                .launch{
+                    margin-top: 20px;
+                }
+            }
+        }
+        }
 }

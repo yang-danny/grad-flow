@@ -21,8 +21,8 @@ const Jobs = () => {
             <Link to='/jobs' className='show-all'>Show all <FaArrowRight size={20}/></Link>
         </div>
         <div className="jobs-bottom">
-       {jobs?.map((job)=>(
-        <JobCard job={job} key ={job.id} />
+        {jobs?.map((job)=>(
+            <JobCard job={job} key ={job.id} />
         ))}
         </div>  
     </div>

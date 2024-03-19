@@ -9,7 +9,7 @@ import { CiLock } from "react-icons/ci";
 import Spinner from '../../components/Spinner'
 
 const Login = () => {
-  const context= useContext(AuthContext)
+    const context= useContext(AuthContext)
     let navigate = useNavigate()
     const [errors, setErrors] = useState([])
     const loginUserCallback=()=>{
@@ -33,7 +33,7 @@ const Login = () => {
   return (
     <div className='login'>
       <div className="login-box">
-    <div className="info">
+      <div className="info">
         <div className="header">
           <h2>Login</h2> 
           <FiUsers size={32}/>
@@ -62,17 +62,17 @@ const Login = () => {
             Login
           </button>
         <span className='function-links'>
-        <p>Do not have an account?</p>
+          <p>Do not have an account?</p>
           <Link className='links' to="/register">Register</Link>
         </span>
         {errors.length > 0 && (
         <div className="error">
           <ul className="list">
-        {errors.map((error)=>{
+          {errors.map((error)=>{
            return (
             <li key={error}>{error.message}</li>
            ) 
-        })}
+           })}
           </ul>
         </div>
       )}

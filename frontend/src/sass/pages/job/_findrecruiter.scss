@@ -1,0 +1,251 @@
+.find-recruiter{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-Advent);
+    margin-top: 20px;
+    .find-recruiter-box {
+    width: 1080px;
+    position:relative;
+    border-radius: 10px;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    .title{
+        margin-top: 20px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        h1{
+            background: linear-gradient(90deg, #E7267A -2.12%, #2B4B9B 89.03%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+            letter-spacing: 7px;
+        }
+        p{
+            margin-top: 5px;
+            color: var(--grey);
+            font-family: var(--font-Actor);
+            text-align: justify;
+        }
+    }
+    .search-bar{
+        width: 80%;
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        .recruiter, .location, .service{
+            margin-left: 10px;
+            h2{
+                color: var(--blue);
+                font-weight: 500;
+            }
+            .input-box {
+                display: flex;
+                position: relative;
+                .icons{
+                    position: absolute;
+                    top:8px;
+                    left: 5px;
+                    color: var(--grey);
+                }
+               input{
+                width: 200px;
+                height: 40px;
+                border: 2px solid var(--blue);
+                border-radius: 5px;
+                padding-left: 30px;
+                font-size: 16px;
+            } 
+            }
+            select{
+                color: var(--grey);
+                width: 200px;
+                height: 40px;
+                border: 2px solid var(--blue);
+                border-radius: 5px;
+                padding-left: 30px;
+                font-size: 16px;
+            }
+        }
+        .search-btn{
+            display: block;
+            margin-left: 10px;
+            button{
+                width: 200px;
+                height: 40px;
+                background-color: var(--blue);
+                border-radius: 5px;
+                color: white;
+                font-family: var(--font-Almarai);
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+    }
+    .search-options{
+        width: 80%;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        margin-bottom: 10px;
+        .option{
+            width: 200px;
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 10px;
+            h3{
+                width: 70%;
+                color:var(--blue);
+                font-weight: 600;
+                font-size: 16px;   
+            }
+            span{
+                width: 30%;
+                height: 30px;
+                background-color: var(--pink);
+                border-radius: 5px;
+                text-align: center;
+                line-height: 30px;
+                font-weight: 700;
+                color: white;
+            }
+        }
+    }
+    }
+    .find-recruiter-box::before{
+        content:'';
+        position:absolute;
+        z-index:-1;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        background:url(../assets/recruiters.jpg);
+        filter:blur(2px) contrast(0.5) brightness(1.8);
+        background-size: cover;
+        background-position: center;
+        opacity: 0.6;
+        border-radius: 10px;
+    }
+    .find-recruiter-result{
+        margin-top: 10px;
+        width: 1080px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .find-recruiter-result-title{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            h1{
+                color: var(--blue);
+                font-size: 36px;
+                font-weight:600 ;
+                } 
+                .result-diaplay{
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                gap: 20px;
+                label{
+                color: var(--blue);
+                font-weight: 600;
+                font-size: 18px;
+                select{
+                    width: 100px;
+                    color: var(--grey);
+                    border: 2px solid var(--card-color);
+                    border-radius: 5px;
+                    margin-left: 3px;
+                    font-size: 16px;
+                    height: 35px;
+                }    
+                }
+                .pagination {
+                    display: flex;
+                    list-style: none;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                    border-radius: 5px;
+                    .page-num{
+                        padding: 5px 10px;
+                        cursor: pointer;
+                        color: var(--blue);
+                        font-size: 18px;
+                        border-radius: 5px;
+                        font-weight: 600;
+                         &:hover  {
+                        background-color: var(--blue);
+                       color: white;
+                    }
+                    }
+                    .active{
+                        background-color: var(--blue);
+                        color: white;
+                    }
+                }   
+                }
+        }
+        .find-recruiter-result-bottom {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        }
+    }
+}
+@media screen and (min-width: 280px) and (max-width: 1080px)  {
+.find-recruiter{
+    height: auto;
+    margin: 10px;
+    .find-recruiter-box{
+        width: 100%;
+        margin: 10px;
+        justify-content: center;
+        .search-bar{
+            width: 100%;
+            display: block;
+            margin: 10px;
+            .recruiter, .location, .service{
+            padding-left: 15%;
+            padding-right: 15%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            }
+            .search-btn{
+            display: flex;
+            justify-content: center;
+                button{
+                 width: 70%;
+                }
+            }
+        }
+        .search-options{
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+    }
+    .find-recruiter-result{
+        width: 100%;
+        margin: 10px;
+        .find-recruiter-result-title{
+            padding: 10px;
+        }
+        .find-recruiter-result-bottom{
+            grid-template-columns: auto auto;
+        }
+        }
+}
+}

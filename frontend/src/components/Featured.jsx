@@ -1,4 +1,3 @@
-import React from 'react'
 import LinkedIn from '../assets/linkedin.png'
 import Seek from '../assets/seek.png'
 import GlassDoor from '../assets/glassdoor.png'
@@ -18,7 +17,6 @@ const  Featured= () => {
             <img src={WorkForce} alt="" id='workforce'/>
         </div>  
         </div>
-        
     </div>
   )
 }

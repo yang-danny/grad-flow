@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import JobCard from './JobCard'
 import { useLocation } from "react-router-dom";
 import {useQuery} from '@apollo/react-hooks';
@@ -75,12 +75,12 @@ const JobSearchResult = () => {
         previousLinkClassName='page-num'
         nextLinkClassName='page-num'
         activeLinkClassName='active'
-      />
+        />
          <label >Sort by: 
          <select 
               value={sort}
               onChange={(e) => setSort(e.target.value)}
-            >
+          >
               <option value="Latest">Latest</option>
               <option value="Oldest">Oldest</option>
               <option value="Title: A-Z">Title: A-Z</option>
@@ -95,9 +95,8 @@ const JobSearchResult = () => {
         {currentItems?.map((job)=>(
             <JobCard job={job} key ={job.id} />
         ))}
-     </div>
-        
-         </div>
+      </div>
+      </div>
    </div>
      
   )

@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaArrowRight } from "react-icons/fa6";
 import { useQuery } from '@apollo/react-hooks';
 import Spinner from './Spinner';
@@ -25,14 +24,13 @@ const News = () => {
                     <img src={bigNews.photo} alt="" />
                     <p>{bigNews.publishDate}</p>
                     <h2>{bigNews.title}</h2>
-                    </Link>
+                </Link>
                 </div>
                 <div className="small-news">
                     {smallNews.map((news)=>(
                     <NewsCard news={news} key ={news.id} />
                     ))} 
                 </div>
-          
             </div>  
         </div>
         </div>

@@ -4,7 +4,6 @@
     display: flex;
     justify-content: center;
     font-family: var(--font-Advent);
-
     .first-job-box{
     width: 1080px;
     display: flex;
@@ -67,8 +66,8 @@
 @media screen and (min-width: 280px) and (max-width: 1080px)  {
     .first-job{
         height: auto;
-    flex-direction: column;
-    padding: 10px;
+        flex-direction: column;
+        padding: 10px;
     .first-job-box{
         width: auto;
         flex-direction: column;
@@ -76,7 +75,7 @@
         width: 100%;
         }
         .right{
-            width: 100%;
+        width: 100%;
         }
     }
     }

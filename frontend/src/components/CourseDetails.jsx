@@ -21,22 +21,21 @@ const CourseDetails = () => {
         <p>{course.description}</p>
         <div className="tags">
         <div className="provider"><MdOutlineHandshake className='icons' size={20} />
-  <img src={course.provider.logo} alt="" />
-  </div>
-          <div className="level"><FaStairs className='icons' size={18}/>{course.level}</div>
+            <img src={course.provider.logo} alt="" />
+        </div>
+        <div className="level"><FaStairs className='icons' size={18}/>{course.level}</div>
         <div className="subject"><MdSubject className='icons' size={20}/>{course.subject}</div>
         <div className="type"><PiBookOpenTextLight className='icons' size={20}/>{course.type}</div>
         <div className="duration"><MdOutlineTimer className='icons' size={20}/>{course.duration}</div>
         <div className="skills"><GiMightySpanner className='icons' size={20}/>{course.skills}</div>
         </div>
-         </div>
+        </div>
         <div className="course-details-right">
             <img src={course.photo} alt="" />
             <div className="launch">
                 <FaRegPlayCircle size={25} className='play'/>
                 <button>Launch Course</button>
             </div>
-            
         </div>
         </div>
         </div>

@@ -5,7 +5,6 @@
     justify-content: center;
     font-family: var(--font-Advent);
     margin-top: 20px;
-
     .jobsearch-box {
     width: 1080px;
     position:relative;
@@ -22,7 +21,6 @@
         flex-direction: column;
         align-items: start;
         justify-content: center;
-
         h1{
             background: linear-gradient(90deg, #E7267A -2.12%, #2B4B9B 89.03%);
             background-clip: text;
@@ -43,7 +41,6 @@
         display: flex;
         align-items: end;
         justify-content: space-between;
-
         .what, .where, .type{
             margin-left: 10px;
             h2{
@@ -103,13 +100,11 @@
             display: flex;
             justify-content: space-between;
             margin: 5px 10px;
-
             h3{
                 width: 70%;
                 color:var(--blue);
                 font-weight: 600;
-                font-size: 16px;
-                
+                font-size: 16px;        
             }
             span{
                 width: 30%;
@@ -183,7 +178,6 @@
             }    
             }
             .pagination {
-                
                 display: flex;
                 list-style: none;
                 justify-content: center;
@@ -205,12 +199,9 @@
                 .active{
                     background-color: var(--blue);
                     color: white;
-                }
-                
+                }         
             }   
-            }
-
-            
+            }    
     }
     .jobsearch-result-bottom{
     display: grid;

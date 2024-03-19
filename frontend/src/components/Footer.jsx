@@ -1,4 +1,3 @@
-import React from 'react'
 import { AiOutlineMail } from "react-icons/ai";
 import {Link } from "react-router-dom"
 import { FaLinkedinIn, FaFacebookF, FaTwitter, FaYoutube } from "react-icons/fa";
@@ -7,9 +6,6 @@ const Footer = () => {
   return (
    <footer>
     <div className="footer-box">
-
-    
-    
     <div className="top">
     <div className="contact">
     <img src={logo} alt="" />
@@ -20,10 +16,10 @@ const Footer = () => {
     <div className="site-links">
     <ul className="about">
         <h3>About</h3>
-    <li><Link className='link'>About Grad Flow</Link></li>
-    <li><Link className='link'>Terms & Policy</Link></li>
-    <li><Link className='link'>Careers</Link></li>
-    <li><Link className='link'>News & Events</Link></li>
+        <li><Link className='link'>About Grad Flow</Link></li>
+        <li><Link className='link'>Terms & Policy</Link></li>
+        <li><Link className='link'>Careers</Link></li>
+        <li><Link className='link'>News & Events</Link></li>
     </ul>
     <ul className="help">
     <h3>Help</h3>

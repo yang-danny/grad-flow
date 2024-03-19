@@ -41,7 +41,6 @@
             }    
             }
             .pagination {
-                
                 display: flex;
                 list-style: none;
                 justify-content: center;
@@ -63,16 +62,31 @@
                 .active{
                     background-color: var(--blue);
                     color: white;
-                }
-                
+                }   
             }   
             }
     }
-    .course-grid-title-bottom{
+    .course-grid-bottom{
         margin-top: 10px;
         display: grid;
         grid-template-columns: auto auto auto;
         gap:20px;
     }
 }
+}
+
+@media screen and (min-width: 280px) and (max-width: 1080px) {
+    .course-grid{
+        .course-grid-box{
+            width: 100%;
+            .course-grid-title{
+                justify-content: center;
+            }
+            .course-grid-bottom{
+                margin: 10px;
+                grid-template-columns: auto;
+                gap:10px;
+            }
+        }
+    }
 }
