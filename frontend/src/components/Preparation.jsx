@@ -1,4 +1,4 @@
-import interview from '../assets/interview.jpg'
+import interview from '../assets/Interview.jpg'
 const Preparation = () => {
   return (
     <div className='preparation'>
